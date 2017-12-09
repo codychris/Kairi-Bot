@@ -7,14 +7,6 @@ client.on('ready', () => {
 
 //---------------------------------------------------test commands-------------------------------------------------------
 
-client.on('MemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  const channel = channels.find('bot-testing', 'member-log');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`Rev up that GPU and lets play some games ${member}!!!!`);
-});
 
 //--------------------------------------------------test webhook---------------------------------------------------------
 
