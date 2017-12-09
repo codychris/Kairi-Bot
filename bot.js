@@ -5,11 +5,11 @@ client.on('ready', () => {
   console.log('I am ready');
  });
 
-//commands
+//---------------------------------------------------------commands----------------------------------------------------------
 
 client.on('message', message =>{
   if (message.content === '!command') {
-    message.reply('!help');
+    message.reply('!help - Type the !help command if you are having any kind of issue in the server a representative will get back to you as soon as we can');
     message.reply('!ping')
   }
 });
