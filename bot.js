@@ -11,5 +11,11 @@ client.on('message', message =>{
   }
 });
 
+client.on('message', message =>{
+  if (message.content === '!help') {
+    message.reply('What can I help you with?');
+  }
+});
+
 //this must be this way
 client.login(process.env.Bot_Token);
