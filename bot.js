@@ -5,7 +5,17 @@ client.on('ready', () => {
   console.log('I am ready');
  });
 
-//---------------------------------------------------------commands----------------------------------------------------------
+//---------------------------------------------------test commands-------------------------------------------------------
+
+client.on('message', message => {
+  // If the message is "what is my avatar"
+  if (message.content === 'what is my avatar') {
+    // Send the user's avatar URL
+    message.reply(message.author.avatarURL);
+  }
+});
+
+//-----------------------------------------------------commands----------------------------------------------------------
 
 client.on('message', message =>{
   if (message.content === '!command') {
