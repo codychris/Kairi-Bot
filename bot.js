@@ -7,14 +7,29 @@ client.on('ready', () => {
 
 //---------------------------------------------------test commands-------------------------------------------------------
 
-client.on('guildMemberAdd', member => {
+client.on('MemberAdd', member => {
   // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find('welcome', 'member-log');
+  const channel = channels.find('bot-testing', 'member-log');
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(`Welcome to the server, ${member}`);
+  channel.send(`Rev up that GPU and lets play some games ${member}!!!!`);
 });
+
+//--------------------------------------------------test webhook---------------------------------------------------------
+
+/*
+  Send a message using a webhook
+*/
+
+// Import the discord.js module
+const Discord = require('discord.js');
+
+// Create a new webhook
+const hook = new Discord.WebhookClient('webhook id', 'webhook token');
+
+// Send a message using the webhook
+hook.send('I am now alive!');
 
 //-----------------------------------------------------commands----------------------------------------------------------
 
