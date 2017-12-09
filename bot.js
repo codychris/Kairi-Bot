@@ -8,7 +8,7 @@ client.on('ready', () => {
 //commands
 
 client.on('message', message =>{
-  if (message.content === '!ping') {
+  if (message.content === '!command') {
     message.reply('!help');
     message.reply('!ping')
   }
